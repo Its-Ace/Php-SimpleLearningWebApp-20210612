@@ -22,8 +22,9 @@
 ## Files Hierarchy
 Here, We have shown how we have managed our project file by making a dummy tree showing folder names and files in it.
 
-* prototype (Will contain prototyping files)
+* Prototype (Will contain prototyping files)
   * prototyping files
+* EMS
 * README.md (markdown file for better understanding of what we are doing)
   
 
