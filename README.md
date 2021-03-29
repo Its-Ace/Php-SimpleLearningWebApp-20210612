@@ -19,9 +19,11 @@
 #### Under Supervision of Prof. Syed Ihtesham Hussain 
 
 
-## Getting Started
+## Files Hierarchy
+Here, We have shown how we have managed our project file by making a dummy tree showing folder names and files in it.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+**prototype
+**README.md
 
 ```
 Give examples
