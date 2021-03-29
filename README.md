@@ -22,8 +22,8 @@
 ## Files Hierarchy
 Here, We have shown how we have managed our project file by making a dummy tree showing folder names and files in it.
 
-**prototype
-**README.md
+** prototype
+** README.md
 
 ```
 Give examples
