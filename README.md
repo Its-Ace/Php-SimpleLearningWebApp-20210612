@@ -48,8 +48,16 @@ Give examples
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
-
+## Git repo bash commmands
+```
+echo "# webengineeering" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Its-Ace/webengineeering.git
+git push -u origin main
+```
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
