@@ -1,6 +1,6 @@
 ## Enrollment System (WEB ENGINEERING)
 
-### |Teammembers|
+### |Team members|
   1. Muhammad Yaseen
   ```
   Role : Lead
@@ -20,11 +20,12 @@
 
 
 ## Files Hierarchy
-Here, We have shown how we have managed our project file by making a dummy tree showing folder names and files in it.
-
+Here, We have shown how we have managed our project file structure as given
+* Requirement (Will contain specified requirement files)
 * Prototype (Will contain prototyping files)
   * prototyping files
-* EMS
+* src (will contain all the source code files such as HTML,PHP,CSS)
+* License.md (License file)
 * README.md (markdown file for better understanding of what we are doing)
   
 
@@ -58,8 +59,6 @@ git branch -M main
 git remote add origin https://github.com/Its-Ace/webengineeering.git
 git push -u origin main
 ```
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+
 
 
