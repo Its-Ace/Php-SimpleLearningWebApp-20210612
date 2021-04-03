@@ -1,6 +1,6 @@
 ## Enrollment System (WEB ENGINEERING)
 
-### |Teammembers|
+### |Team members|
   1. Muhammad Yaseen
   ```
   Role : Lead
