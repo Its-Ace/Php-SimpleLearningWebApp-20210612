@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+</head>
+<header>
+    <div id="mySidebar" class="sidebar">
+        <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">University Courses</a>
+        <a href="#">Student information</a>
+        <a href="#">Student Enrollment form</a>
+    </div>
+    
+    <div id="nav-side-button">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </div>
+    <img src="logo.png" alt="logo">
+    
+    <div class="header-center-item">
+        <span>Page name</span>
+    </div>
+    
+    <div class="header-right-item">
+        <img src = "user.png" alt = "N/A">
+        <a href="account.html">Account settings</a>
+    </div>
+
+</header>
+<body>
+    
+    <div class="upper-nav">
+        <a href = "studentInformation.html"><button>&#8249;Back</button></a>
+    </div>
+    <div>
+        <span>Internal Page name</span>
+    </div>
+
+    <div class="form-box">
+        <form action="/student_form.html">
+          <h1>Student Enrollment Request Form</h1>
+          <h4>Name<span>*</span></h4>
+          <div class="title-block">
+            <select>
+              <option value="e-form" selected>Enrollment Form</option>
+            </select>
+            
+            <div class="read-only-item">     
+                <input class="name" type="text" name="name" value = "Muhammad Yaseen" readonly />
+                <input class="name" type="text" name="sap-id" value = "2165" readonly />
+                <input class="name" type="text" name="semester" value = "5th" readonly />
+                <input class="name" type="text" name="course-instructor" value = "Teacher name" readonly />
+            </div>
+
+          </div>
+          <h4>Comment:<span>*</span></h4>
+          <h4>Course<span>*</span></h4>
+          <select>
+            <option value="1">Course 1</option>
+            <option value="2">Course 2</option>
+            <option value="3">Course 3</option>
+            <ption value="4">Course 4</option>
+          </select>
+
+          <h4>Course<span>*</span></h4>
+          <select>
+            <option value="1">Course 1</option>
+            <option value="2">Course 2</option>
+            <option value="3">Course 3</option>
+            <ption value="4">Course 4</option>
+          </select>
+
+          <h4>Course<span>*</span></h4>
+          <select>
+            <option value="1">Course 1</option>
+            <option value="2">Course 2</option>
+            <option value="3">Course 3</option>
+            <ption value="4">Course 4</option>
+          </select>
+
+          <h4>Feedback<span>*</span></h4>
+          <select>
+            <option value=""></option>
+            <option value="1">Credit and Debit Cards</option>
+            <option value="2">Deposit</option>
+            <option value="3">Housing and Renovation Loan</option>
+            <option value="4">iBanking</option>
+            <option value="5">Treasures</option>
+          </select>
+         
+          <h4>Feedback/Enquiry</h4>
+          <p class="small">By filling this you agree to terms and policy.</small>
+            <textarea rows="5"></textarea>
+          <div class="btn-block">
+            <button type="submit" href="/">Send Feedback</button>
+          </div>
+        </form>
+      </div>
+      <div class="action-form">
+          <button>
+              Accept
+          </button>
+          <button>
+              Reject
+          </button>
+      </div>
+</body>
+</html>
