@@ -334,7 +334,8 @@ form > .top{
 }
 .users-data{
     display: grid;
-    justify-items: normal;
+    align-items: flex-end;
+    font-size: 13px;
     text-decoration: none;
 }
 .flex-around {
@@ -349,9 +350,9 @@ form > .top{
 .card-box
 {
     position: relative;
+    min-width: 300px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 30%;
     height: 50%;
     background-color: white;
     border-radius: 2px;
@@ -367,12 +368,28 @@ form > .top{
 
 .admin-dboard{
     background: rgb(255,255,255);
-background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(31,161,187,0.9247898988697041) 0%, rgba(169,218,218,0.9051820557324493) 62%);
-}
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(31,161,187,0.9247898988697041) 0%, rgba(169,218,218,0.9051820557324493) 62%);
+}   
+
 
 .card-box a > img{
-    width: 350px;
+    width: 300px;
     height: 200px;
-    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    border-bottom: outset 1px rgb(118, 200, 255);   
+}
+.menu-container{
     display: block;
+    justify-content: left;
+    padding-left: 5px;
+    border-top-style: solid;
+    padding-top: 50px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-top-width: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 15px;
 }
