@@ -333,8 +333,9 @@ form > .top{
     justify-content: space-between;
 }
 .users-data{
-    display: grid;
-    align-items: flex-end;
+    min-width: 100px;
+    min-height: 5px;
+    display: flex;
     font-size: 13px;
     text-decoration: none;
 }
@@ -346,14 +347,15 @@ form > .top{
     justify-content: space-between;
     align-items: center;
     padding: 50px;
+    min-height: 200px;
 }
 .card-box
 {
     position: relative;
     min-width: 300px;
+    min-height: 320px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    height: 50%;
     background-color: white;
     border-radius: 2px;
 }
@@ -371,6 +373,10 @@ form > .top{
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(31,161,187,0.9247898988697041) 0%, rgba(169,218,218,0.9051820557324493) 62%);
 }   
 
+.card-box >A{
+    text-decoration: none;
+    color: black;
+}
 
 .card-box a > img{
     width: 300px;
@@ -392,4 +398,19 @@ form > .top{
     margin-left: 50px;
     margin-right: 50px;
     font-size: 15px;
+}
+.users-data > .content,a{
+    position: relative;
+    margin-top: -10px;
+    text-decoration: none;
+    height: 60px;
+    display: block;
+}
+.top-items > label{
+    color: #5f9ef0;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom : solid 4px rgb(109, 139, 238);
+    margin-bottom: 10px;
 }
