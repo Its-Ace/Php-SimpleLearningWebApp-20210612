@@ -344,16 +344,19 @@ form > .top{
     width: auto;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding: 40px;
     min-height: 200px;
 }
 .card-box
 {
     position: relative;
+    margin-top: 40px;
     min-width: 300px;
     min-height: 320px;
+    justify-content: space-around;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     background-color: white;
@@ -369,11 +372,10 @@ form > .top{
 }
 
 .admin-dboard{
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(31,161,187,0.9247898988697041) 0%, rgba(169,218,218,0.9051820557324493) 62%);
+    background: url(../img/partical.png) !important ;
 }   
 
-.card-box >A{
+.card-box >a{
     text-decoration: none;
     color: black;
 }
@@ -414,3 +416,40 @@ form > .top{
     border-bottom : solid 4px rgb(109, 139, 238);
     margin-bottom: 10px;
 }
+.sidenav {
+    display: none;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/style.css">
     <title>University Courses</title>
 </head>
-<header>
-    <div id="mySidebar" class="sidebar">
-        <a href="" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">University Courses</a>
-        <a href="#">Student information</a>
-        <a href="#">Student Enrollment form</a>
-    </div>
-    
-    <div id="nav-side-button">
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
-    </div>
-    <img src="logo.png" alt="logo">
-    
-    <div class="header-center-item">
-        <span>Page name</span>
-    </div>
-    
-    <div class="header-right-item">
-        <img src = "user.png" alt = "N/A">
-        <a href="account.html">Account settings</a>
-    </div>
-</header>                                                                                   
+                                                                                 
 <body>
+    <header class = "header-default">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">University Courses</a>
+            <a href="#">Student information</a>
+            <a href="#">Student Enrollment form</a>
+        </div>
+        <div class="top-items">
+            <div id="nav-side-button">
+                <button class="openbtn" onclick="openNav()">&#9776;</button>
+            </div>
+            <img src="logo.png" alt="logo">
+            
+            <div class="header-center-item">
+                <span>Page name</span>
+            </div>
+            
+            <div class="header-right-item">
+                <img src = "user.png" alt = "N/A">
+                <a href="account.html">Account settings</a>
+            </div>
+        </div>
+        
+    </header>  
     <h3>Program:</h3>
     <div class="dropdown">
         <button class="dropbtn">Select program</button>
@@ -69,3 +74,13 @@
     </div>
 </footer>
 </html>
+
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.display = "block";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.display = "none";
+    }
+</script>
