@@ -1,3 +1,34 @@
+:root {
+    --blue: #1177d1;
+    --indigo: #6610f2;
+    --purple: #613d7c;
+    --pink: #e83e8c;
+    --red: #d9534f;
+    --orange: #f0ad4e;
+    --yellow: #ff7518;
+    --green: #5cb85c;
+    --teal: #20c997;
+    --cyan: #5bc0de;
+    --white: #fff;
+    --gray: #868e96;
+    --gray-dark: #373a3c;
+    --primary: #1177d1;
+    --secondary: #e9ecef;
+    --success: #5cb85c;
+    --info: #5bc0de;
+    --warning: #f0ad4e;
+    --danger: #d9534f;
+    --light: #f8f9fa;
+    --dark: #373a3c;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+     
 html {
     overflow-x: hidden;
     overflow-y: scroll;
@@ -12,12 +43,13 @@ html {
     box-sizing: border-box;
 }
 body{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     position: absolute;
     padding: 0;
     margin: 0;
     width:100%;
     color: var(--gray90);
-    font-family: 'Lato', sans-serif;
+    font-family: 'open Sans';
     font-size: 1.5rem;
     line-height: 1.6em;
     font-weight: 400;
@@ -79,30 +111,69 @@ li > a:hover{
     color: #5f9ef0;
     cursor: pointer;
     font-size: 18px;
-    border: solid 5px rgb(124, 124, 115);
+    font-weight: bold;
+    border-bottom : solid 2px rgb(109, 139, 238);
 }
 
 .page-main-container{
+    position: relative;
     margin-top: 5%;
-    margin-left: 10px;
+    height: 80%;
+    margin-left: 50px;
+    margin-right: 500px;
     align-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+
 }
+.container {
+    padding: 10px 16px;
+    font-size: 18px;
+  }
 .signin-button{
     position: relative;
-    background-color: #2b2b2b;
+    background-color: #2172FF;
     top: 6px;
     right: 0px;
     font-weight: 10;
     font-size: medium;
     line-height: 1.5;
-    color: #eaeef1;
+    color: #ffffff;
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 4px;
     padding-bottom: 4px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     margin-bottom: 15px;
     border: solid 5px #5e5b5b;
-    border-radius: 10ch;
+    border-radius: 0mm;
+}
+.signin-button :hover{
+    background-color: white;
+    color: #2b2b2b;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5mm;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+footer{
+    position: fixed;
+    font-size: 15px;
+    text-decoration: underline;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:  #f8f8f8;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    display: block;
+    padding: 15px;
+}
+
+.body-main-container > h2{
+    font-family: "Segoe UI",Arial,sans-serif;
+     padding-top: 20px;
+    padding-bottom: 0px;
+    padding-left: 15px;
 }
