@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Dashboard</title>
+
 </head>
-<header>
-    <img src = "logo.jpg" alt = 'logo'>
-    <label>Dashboard</label>
-    <img src = "user.png" alt = "N/A">
-    <a href="account.html">Account settings</a>
-</header>
-<body>
 
-    <div class="card-box">
-        <a href = "1.universityCourses/UniversityCourses.html">
-            <img src = "uni-courses.png" alt = "img">
-            <h5>University courses</h5>
-        </a>
-    </div>
+<body class = "admin-dboard">
+    <header class="header-default">
+        <div class="top-items">
+            <img src = "../img/logo.png" style="position: relative; margin-top: -15px; width: 60px; height: 60px; padding-top: 10px" alt = 'logo'>
+            <label>Dashboard</label>
+            <div class="users-data">
+                <img src = "user.png" alt = "N/A">
+                <a href="account.html">Account settings</a>    
+            </div>  
+        </div>
+        
+    </header>
+    <div class="flex-around">
+        <div class="card-box">
+            <a href = "1.universityCourses/UniversityCourses.html">
+                <img src = "../img/img-courses.png" alt = "img">
+                <div class="internal-container">
+                    <h5>University courses</h5>    
+                </div>
+                
+            </a>
+        </div>
+        
+        <div class="card-box">
+            <a href="2.studentsInformation/studentInformation.html">
+                <img src = "students-info.png" alt = "img">
+                <div class="internal-container">
+                    <h5>Student Information</h5>    
+                </div>
+                
+            </a>
+        </div>
+        
+        <div class="card-box">
+            <a href="3.StudentForms/studentforms.html">
+                <img src="img_avatar.png" alt="Avatar" style="width:100%; border-bottom: outset 1px rgb(118, 200, 255);">
+                <div class="internal-container">
+                    <h5>Enrollment form</h5>
+                </div>
+                
+            </a>
+        </div>     
+    </div>  
     
-    <div class="card-box">
-        <a href="2.studentsInformation/studentInformation.html">
-            <img src = "students-info.png" alt = "img">
-            <h5>Student Information</h5>
-        </a>
-    </div>
-    
-    <div class="card-box">
-        <a href="3.StudentForms/studentforms.html">
-            <img src = "e-forms.png" alt = "img">
-            <h5>Enrollment form</h5>
-        </a>
-    </div>
-
 </body>
 <footer>
     <div class="btm-footer">
-        All rights reserved
+       &copy All rights reserved
     </div>
 </footer>
 </html>

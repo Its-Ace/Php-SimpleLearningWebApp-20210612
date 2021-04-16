@@ -209,7 +209,7 @@ form > .top{
     width: auto;
     position: relative;
     display: flex;
-    justify-content: space-between ;
+    justify-content: space-betweem ;
     align-items: center;
     padding: 100px;
 }
@@ -324,4 +324,55 @@ form > .top{
     box-shadow: -20px 1px 5px 5px rgba(19, 93, 172, 0.71);
     border-radius: 2%;
     flex-shrink: 0;
+}
+.top-items{
+    padding: 10px;
+    font-size: 17px;
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+}
+.users-data{
+    display: grid;
+    justify-items: normal;
+    text-decoration: none;
+}
+.flex-around {
+    font-family: "Segoe UI",Arial,sans-serif !important;
+    width: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+.card-box
+{
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+    height: 50%;
+    background-color: white;
+    border-radius: 2px;
+}
+.internal-container
+{
+    padding: 2px 16px;
+}
+
+.card-box:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.admin-dboard{
+    background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(31,161,187,0.9247898988697041) 0%, rgba(169,218,218,0.9051820557324493) 62%);
+}
+
+.card-box a > img{
+    width: 350px;
+    height: 200px;
+    position: relative;
+    display: block;
 }
