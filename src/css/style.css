@@ -481,5 +481,72 @@ form > .top{
     color: white;
     font-size: 15px;
     padding-top: 5px;
-    padding-left: 10px ;
+    padding-left: 7px ;
 }
+
+.active-page{
+    width: 50;
+    height: 50;
+    border: solid 1px white;
+    border-radius: 50%;
+}
+.dropdown {
+    position: relative;
+    display: block;
+    flex-wrap: wrap;
+  }
+.dropbtn{
+
+    background-color: var(--blue);
+    color: wheat;
+    width: 60%;
+    height: 20%;
+    border: #373a3c solid 2px;
+}
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .program-view{
+      display: flex;
+      position: relative;
+  }
+  #courses-items {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #courses-items td, #courses-items th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 12px;
+}
+  
+  #courses-items tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #courses-items tr:hover {background-color: #ddd;}
+  
+  #courses-items th {
+    
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0689bd;
+    color: white;
+  }
+
+  tr td a > button{
+      color: white;
+      background-color: var(--blue);
+  }
