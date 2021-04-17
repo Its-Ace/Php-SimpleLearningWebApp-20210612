@@ -5,68 +5,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/src/css/style.css">
     <title>University Courses</title>
 </head>
                                                                                  
-<body>
+<body class="admin-dboard">
+
     <header class = "header-default">
+        <div class="top-items">
+            <img src = "/src/img/logo.png" style="position: relative; margin-left: 30px; margin-top: -15px; width: 60px; height: 60px; padding-top: 10px" alt = 'logo'>
+            <label>Dashboard</label>
+            <div class="users-data">
+                <div class = "content">
+                    <strong>Name</strong>
+                    <a href="account.html">Account settings</a>
+                </div>
+                <img src = "/src/img/blank-profile.png" style="width: 50px ; height: 50px; border: solid 6px rgba(255, 255, 255, 0.26); border-radius: 50%;" alt = "N/A"><br>
+            </div>  
+        </div>
+        
+    </header> 
+    <div class="z-index">
+        <button class="openbtn" onclick="openNav()">☰</button> 
+        <div class="nav-side-sticky">
+            <a href="#home"><i class="fa fa-fw fa-home"></i>aa</a>
+            <a href="#services"><i class="fa fa-fw fa-wrench"></i>aa</a>
+            <a href="#clients"><i class="fa fa-fw fa-user"></i>aa</a>
+            <a href="#contact"><i class="fa fa-fw fa-envelope"></i>aa</a>
+        </div>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#">University Courses</a>
             <a href="#">Student information</a>
             <a href="#">Student Enrollment form</a>
         </div>
-        <div class="top-items">
-            <div id="nav-side-button">
-                <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </div>
+    <div class="inside">
+        <h3>Program:</h3>
+        <div class="dropdown">
+            <button class="dropbtn">Select program</button>
+            <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
             </div>
-            <img src="logo.png" alt="logo">
-            
-            <div class="header-center-item">
-                <span>Page name</span>
-            </div>
-            
-            <div class="header-right-item">
-                <img src = "user.png" alt = "N/A">
-                <a href="account.html">Account settings</a>
-            </div>
-        </div>
+        </div> 
+
+        <h3>Course</h3>
         
-    </header>  
-    <h3>Program:</h3>
-    <div class="dropdown">
-        <button class="dropbtn">Select program</button>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+        <input type="text" placeholder="Search">
+        <div class="table-course">
+            <table>
+                <tr>
+                <th>Semester no</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                </tr>
+                <tr>
+                    <th>Course name</th>
+                    <th></th>
+                    <th><a href = "details.html"><button>details</button></a></th>
+                    <th><a href = "options.html"><button>Option</button></a></th>
+                </tr>
+                <tr>
+                    <th>Course name</th>
+                    <th></th>
+                    <th><a href = "details.html"><button>details</button></a></th>
+                    <th><a href = "options.html"><button>Option</button></a></th>
+                </tr>
+            </table>
         </div>
-    </div> 
-<h3>Course</h3>
- <input type="text" placeholder="Search">
-<div class="table-course">
-    <table>
-        <tr>
-          <th>Semester no</th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-        <tr>
-            <th>Course name</th>
-            <th></th>
-            <th><a href = "details.html"><button>details</button></a></th>
-            <th><a href = "options.html"><button>Option</button></a></th>
-        </tr>
-        <tr>
-            <th>Course name</th>
-            <th></th>
-            <th><a href = "details.html"><button>details</button></a></th>
-            <th><a href = "options.html"><button>Option</button></a></th>
-        </tr>
-      </table>
-</div>
+    </div>
+   
 </body>
 <footer>
     <div class="btm-footer">

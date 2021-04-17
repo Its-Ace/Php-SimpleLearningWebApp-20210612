@@ -328,7 +328,7 @@ form > .top{
 .top-items{
     padding: 10px;
     font-size: 17px;
-    position:relative;
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
@@ -427,29 +427,59 @@ form > .top{
     background-color: #111;
     overflow-x: hidden;
     padding-top: 60px;
-  }
-  
-  .sidenav a {
+}
+
+.sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
-  }
-  
-  .sidenav a:hover {
+}
+
+.sidenav a:hover {
     color: #f1f1f1;
-  }
-  
-  .sidenav .closebtn {
+}
+
+.sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
-  
-  @media screen and (max-height: 450px) {
+}
+
+@media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-  }
+}
+.nav-side-sticky{
+    display: block;
+    position: absolute;
+    margin-top: 32px;
+    width: 42px;
+    height: 84.8vh;
+    color: wheat;
+    background-color: rgb(125, 131, 133);
+    border-right: white outset 4px;
+}
+.inside{
+    display: block;
+    padding-left: 100px;
+}
+.z-index
+{
+    top:0px;
+    min-height: 84.8vh; 
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    
+}
+.nav-side-sticky > a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-left: 10px ;
+}
