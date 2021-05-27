@@ -1,3 +1,8 @@
+<?php
+    $test = 0;
+    include("connection_test.php");
+    test_connection();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +30,9 @@
                 </li>
             </ul>
             <div class="signin-button">
-                <span>Log in</span>
+                <a href="logon.php">
+                    <span>Sign in</span>
+                </a>
             </div>
         </nav>
     </header> 

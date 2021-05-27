@@ -99,8 +99,10 @@ body{
 }
 li > a
 {
+    margin:0;
+    height: 45px;
     font-family: "Jim Sans Medium",Arial;
-    font-size: 1.0rem;
+    font-size: 1.2rem;
     font-weight: 100;
     color: #2b2b2b !important;
     outline: none;
@@ -562,4 +564,15 @@ tr td a > button{
 
 .closebtn{
     margin-top: 10;
+}
+
+.card-box-red-warning{
+
+    opacity: 0.6;
+    background-color:var(--red);
+    font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+    color: var(--white);
+    border: #111 solid 1px;
+    border-radius: 0.5rem ;
+    font-size: 20px;
 }
