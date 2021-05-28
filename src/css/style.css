@@ -59,8 +59,11 @@ body{
     font-style: normal;
     letter-spacing: 0;
     text-rendering: optimizeLegibility;
-    background: url(../img/background.svg);
+    background-color: #14416a;
+    background-image: url(../img/background_ems.svg);
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     background-size: 100%;
 }
 .header-default{
@@ -171,7 +174,7 @@ footer{
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color:  #f8f8f8;
+    background-color:#05264c;
     color: rgb(0, 0, 0);
     text-align: left;
     display: block;
