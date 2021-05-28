@@ -336,10 +336,11 @@ form > .top{
     flex-shrink: 0;
 }
 .top-items{
-    padding: 10px;
-    font-size: 17px;
+    padding: 0px;
+    font-size: 18px;
     position: relative;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 .users-data{
@@ -411,7 +412,7 @@ form > .top{
     margin-right: 50px;
     font-size: 15px;
 }
-.users-data > .content,a{
+.users-data > .content > a{
     position: relative;
     margin-top: -10px;
     text-decoration: none;
