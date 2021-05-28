@@ -41,7 +41,7 @@ html {
     margin: 0;
     padding: 0;
     border: 0;
-    -webkit-tap-highlight-color: rgba(13, 41, 69, 0);
+    -webkit-tap-highlight-color: rgba(19,65,105,0.5);
 }
 *, ::after, ::before {
     box-sizing: border-box;
@@ -75,6 +75,12 @@ body{
     width: 100%;
 
 }
+
+.logo{
+    height: 70px;
+    margin-left: 30px;
+}
+
 .nav-main{
     position: absolute;
     width: 100%;
@@ -124,12 +130,14 @@ li > a:hover{
 
 .page-main-container{
     position: relative;
+    color: whitesmoke;
     margin-top: 5%;
     height: 80%;
     margin-left: 50px;
     margin-right: 500px;
     align-content: center;
-    box-shadow: 0 4px 8px 0 rgba(19,65,105,0.5);
+    box-shadow: 0 4px 8px 0 rgba(40,141,200,0.5) ;
+    border-radius: 5px;
     transition: 0.3s;
 
 }
@@ -140,27 +148,27 @@ li > a:hover{
 .signin-button{
     font-family: 'Roboto Condensed', sans-serif;
     position: relative;
-    background-color: #2172FF;
-    top: 6px;
-    right: 0px;
-    font-weight: 10;
+    background-color: #05264c;
+    /* top: 6px;
+    right: 0px; */
+    font-weight: normal;
     font-size: medium;
     line-height: 1.5;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
     padding-top: 4px;
     padding-bottom: 4px;
     padding-left: 50px;
     padding-right: 50px;
     margin-bottom: 15px;
-    box-shadow: 0px 4px 9px 3px rgba(19, 93, 172, 0.71);    
-    border-radius: 1mm;
+    box-shadow: 0px 4px 9px 3px rgba(40,141,200,0.5);    
+    border-radius: 5px;
 }
 .signin-button :hover{
-    background-color: white;
-    color: #2b2b2b;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 1mm;
+    background-color: #008CBA;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(40,141,200,0.5);
+    border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
     font-weight: 100;
@@ -183,6 +191,7 @@ footer{
 
 .body-main-container > h2{
     font-family: 'Roboto Condensed', sans-serif;
+    color: whitesmoke;
     padding-top: 20px;
     padding-bottom: 0px;
     padding-left: 15px;
@@ -293,10 +302,11 @@ form > .top{
     margin-right: 50px;
     align-content: center;
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    opacity: 0.8;
+    box-shadow: 0 4px 8px 0 rgba(40,141,200,0.5);
     transition: 0.3s;
     list-style: circle;
-    border-radius: 2px ;
+    border-radius: 5px ;
 
 }
 
@@ -304,7 +314,7 @@ form > .top{
     padding: 10px;
     align-items: center;
     display: block;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(40,141,200,0.5);
 }
 
 .sidebar-left
@@ -320,7 +330,8 @@ form > .top{
     padding-bottom: 32px;
     overflow-y: auto;
     height: 100vh;
-    box-shadow: -20px 1px 5px 5px rgba(19, 93, 172, 0.71);
+    box-shadow: -20px 1px 5px 5px rgba(40,141,200,0.5);
+    opacity: 1;
     border-radius: 2%;
     flex-shrink: 0;
 }
