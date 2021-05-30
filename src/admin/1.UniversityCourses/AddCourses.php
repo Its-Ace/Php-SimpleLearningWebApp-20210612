@@ -11,7 +11,7 @@
       die("Connection failed: " .mysqli_connect_error());
    }
 
-   if($conn)
+   if($conn && !empty($_POST))
    {
       $id=$_POST['CourseID'];
       $name=$_POST['CourseName'];
@@ -19,15 +19,10 @@
       $status=$_POST['Status'];
 
       $sql = "insert into course(id,name,semester,status) value ('$id','$name','$semester','$status')";
+      mysqli_query($conn, $sql);
    }
-   if(mysqli_query($conn, $sql))
-   {
-      echo"New Record created";
-   }
-   else{
-   }
-   
 ?>
+
 <!DOCTYPE html>
 <html>
    <head>
