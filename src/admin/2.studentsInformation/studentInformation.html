@@ -4,69 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <title>Students Information</title>
-</head>
-<header>
-    <div id="mySidebar" class="sidebar">
-        <a href="" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">University Courses</a>
-        <a href="#">Student information</a>
-        <a href="#">Student Enrollment form</a>
+</head>                                                                                   
+<body>
+    <header class = "header-default">
+        <nav class="nav-main">
+            <div class="brand">
+                <img class="logo" src="../../icon_ems.png" alt="EMS">
+            </div>
+            <ul class="nav-contained">
+                <li>Dashboard</li>
+            </ul>
+            <div class="users-data">
+                <div class = "content">
+                    <strong>Name</strong>
+                    <a href="account.html">Account settings</a>
+                </div>
+                <img src = "../../img/blank-profile.png" style="width: 50px ; height: 50px; border: solid 6px rgba(255, 255, 255, 0.26); border-radius: 50%;" alt = "N/A"><br>
+            </div>
+        </nav>  
+        </div>
+    </header>
+    <div>
+        <div class="sidebar">
+            <a href="#home"><i class="active-page fa fa-fw fa-home"></i></a>
+            <a href="#services"><i class="fa fa-fw fa-wrench"></i></a>
+            <a href="#clients"><i class="fa fa-fw fa-user"></i></a>
+            <a href="#contact"><i class="fa fa-fw fa-envelope"></i></a>
+        </div>
+        <div class="card-box">
+            <div class="program-view">
+                <div class="dropdown">
+                    <button class="dropbtn">Select program</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+                <input type="text" placeholder="Search student">
+            </div>
+            <div class="card-box" style="width: 80%;">
+                <div class="table-students">
+                    <table id="courses-items">
+                        <tr>
+                            <th>Semester no</th>
+                            <th>SAP</th>
+                            <th>CGPA</th>
+                            <th>SGPA</th>
+                            <th>Semester</th>
+                            <th>Enrollment Form</th>
+                        </tr>
+                        <tr>
+                            <td>name1</td>
+                            <td>1111</td>
+                            <td>3.25</td>
+                            <td>2.0</td>
+                            <td>5th</td>
+                            <td id = "view-button"><a href= "studentInformation.html"><button>Status</button></a></td>
+                        <tr>
+                            <td>name1</td>
+                            <td>1111</td>
+                            <td>3.25</td>
+                            <td>2.0</td>
+                            <td>5th</td>
+                            <td id = "view-button"><a href= "studentInformation.html"><button>Status</button></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
     
-    <div id="nav-side-button">
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
-    </div>
-
-    <div class="header-center-item">
-        <span>Page name</span>
-    </div>
-
-    <div class="header-right-item">
-        <img src = "user.png" alt = "N/A">
-        <a href="account.html">Account settings</a>
-    </div>
-</header>                                                                                   
-<body>
-    <h3>Program:</h3>
-    <div class="dropdown">
-        <button class="dropbtn">Select program</button>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-    </div> 
-<h3>Students </h3>
- <i class = "student-ico"></i>
- <input type="text" placeholder="Search">
-<div class="table-students">
-    <table>
-        <tr>
-            <th>Semester no</th>
-            <th>SAP</th>
-            <th>CGPA</th>
-            <th>SGPA</th>
-            <th>Semester</th>
-            <th>Enrollment Form</th>
-        </tr>
-        <tr>
-            <td>name1</td>
-            <td>1111</td>
-            <td>3.25</td>
-            <td>2.0</td>
-            <td>5th</td>
-            <td id = "view-button"><a href= "studentInformation.html"><button>Status</button></a></td>
-        <tr>
-            <td>name1</td>
-            <td>1111</td>
-            <td>3.25</td>
-            <td>2.0</td>
-            <td>5th</td>
-            <td id = "view-button"><a href= "studentInformation.html"><button>Status</button></a></td>
-        </tr>
-      </table>
-</div>
 </body>
 <footer>
     <div class="btm-footer">

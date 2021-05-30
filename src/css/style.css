@@ -653,3 +653,7 @@ tr td a > button{
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: transparent;}
+
+.table-student{
+    color: #05264c;
+}
