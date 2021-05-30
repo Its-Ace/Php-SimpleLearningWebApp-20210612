@@ -1,0 +1,23 @@
+{
+  "name": "htdocs",
+  "version": "1.0.0",
+  "description": "1. Muhammad Yaseen\r   ```\r   Role : Lead\r   SAP : 2165\r   ```\r   2. Joel Josph\r   ```\r   Role : Developer\r   SAP : 2393\r   ```\r   3. Muhammad Tahir Anees\r   ```\r   Role : Developer\r   SAP : 2523\r   ```\r #### Under Supervision of Prof. Syed Ihtesham Hussain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Its-Ace/webengineering.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Its-Ace/webengineering/issues"
+  },
+  "homepage": "https://github.com/Its-Ace/webengineering#readme",
+  "dependencies": {
+    "@types/jquery": "^3.5.5",
+    "tsd": "^0.15.1"
+  }
+}

@@ -60,5 +60,11 @@ git remote add origin https://github.com/Its-Ace/webengineeering.git
 git push -u origin main
 ```
 
+## Updates
+```
+Added php sessions.
+node modules are added for typescript detection by intellisense.
+Jquery and Js files are added.
 
+```
 

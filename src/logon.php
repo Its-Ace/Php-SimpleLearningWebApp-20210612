@@ -1,32 +1,18 @@
 <?php
-    require_once("connection_test.php");
     //Returns sqli connection if we have successful connection
+    require_once("connection_test.php");
+    //Session info if any is already exist
+    require_once("config.php");
+
     global $conn;
     global $row;
-    if(test_connection()){
-        $conn = test_connection();
-       
-    }
     
-    session_start();
-    
-    //Config tab
-    if (isset($_SESSION['active_time']) && (time() - $_SESSION['active_time'] > (60))) {
-        session_unset();     // unset $_SESSION   
-        session_destroy();   // destroy session data  
+    if(test_connection())
+    {
+        $conn = test_connection();   
     }
-    if(!empty($_SESSION) && isset($_SESSION['user_type']))
-    {   
-        if($_SESSION['user_type'] == 'Admin'){
-            header("Location: admin/dashboard.html");
-        }
-        else if( $_SESSION['user_type'] == 'Student'){
-            header("Location: student/dashboard.html");
-        }
-           
-    }     
 
-    $not_validated = '';
+    $validation_masg = '';
     if (isset($_POST['logon']) && !empty($_POST['user_name']) && !empty($_POST['user_password'])) 
     {
         $username = htmlentities($_POST['user_name']);
@@ -52,49 +38,52 @@
             $_SESSION['user_name'] = $row['name'];
             $_SESSION['user_type'] = 'Student';
             $_SESSION['active_time'] = time();
-         
+            header("Location: admin/dashboard.html");
         }
         else if ($Admin_check_name == 1 && $Admin_check_password >= 1) 
         {   
-
             $row = mysqli_fetch_array($query1_result,MYSQLI_ASSOC);
-            
             $_SESSION['user_name'] = true;
             $_SESSION['user_type'] = 'Admin';
             $_SESSION['active_time'] = time();
+            header("Location: student/dashboard.html");
      
         }
         else 
         {
-            $not_validated = "Fill in valid values.";
+            $validation_masg = "Fill in valid values.";
         }
      
          
     }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type = "img/png" rel = "shortcut icon" href="favicon.ico.png">
     <link rel="stylesheet" href="css/style.css">
+    <script src="script/jquery-3.6.0.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <title>Log on</title>
 </head>
 
 
-<body>
+<body id = "main">
     <header class = "header-default">
         <nav class="nav-main">
             <div class="brand">
-                <img src="./img/default.png" alt="" style="width: 100px; height: 100px; padding-top: 10px">
+                <img src="./img/default.png" alt="" style="width: 100px; height: 100px; padding-top: 10px;margin-bottom: 11px;">
             </div>   
             <ul class="nav-contained">
                 <li>
-                    <a href = "home.html">Home</a>
+                    <a href = "./home.php">Home</a>
                 </li>
                 <li>
-                    <a href = "Howto.html">How to use?</a>
+                    <a href = "./Howto.php">How to use?</a>
                 </li>
             </ul>
         </nav>
@@ -116,11 +105,13 @@
                     <h2>Provide your credentials</h2>
                 </div>
                 <?php
-                    if($not_validated != ''){
+                    if($validation_masg
+             != ''){
                         echo'   
                         <div>
                             <div class="card-box-red-warning" style = "padding-left: 10px; margin-top: 10px;">'.
-                                $not_validated .
+                                $validation_masg
+                         .
                             "</div>
                         </div>";
                     }
@@ -152,3 +143,8 @@
 </footer>
 
 </html>
+<script type = 'text/javascript'>    
+    $(document).ready(function(){
+        $('#main').fadeIn(2000);
+    });
+</script>
