@@ -1,3 +1,6 @@
+<?php
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,15 +24,31 @@
                     <strong>Name</strong>
                     <a href="account.html">Account settings</a>
                 </div>
-                <img src = "../img/blank-profile.png" style="width: 50px ; height: 50px; border: solid 6px rgba(255, 255, 255, 0.26); border-radius: 50%;" alt = "N/A"><br>
-            </div>  
+                <div class="user-info-summary">
+                    <img src = "../img/blank-profile.png" style="width: 50px ; height: 50px; border: solid 6px rgba(255, 255, 255, 0.26); border-radius: 50%;" alt = "N/A"><br>
+                   
+                    <div class="dropdown">
+                    <i class=""></i>
+                        <button onclick="myFunction()" class="fas fa-angle-down"></button>
+                            <div id="dropdown-menu-id" class="dropdown-content">
+                                <?php 
+                                    echo '<a href="../logout.php?REF=logout">Log-out</a>';
+                                ?> 
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                    </div> 
+               
+                </div>
+                
+            </div>
         </div>
         
     </header>
     <div class="menu-container fa fa-bars">
     
         <strong>Menu</strong>
-    
+       
     </div>
 
     <div class="flex-around">
@@ -70,3 +89,23 @@
     </div>
 </footer>
 </html>
+<script type="text/javascript">
+
+function myFunction() {
+  document.getElementById("dropdown-menu-id").classList.toggle("show");
+}
+
+//If we have shown the content then if we click on another think then that then it should close
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+</script>

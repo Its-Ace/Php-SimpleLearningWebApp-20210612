@@ -42,8 +42,6 @@ test_connection();
 
     <div class="page-main-container">
 
-        <div class="slideshow-container">
-        
         <div class="left-main-container">
             <h2>Riphah<br>International University</h2>
             <img src="./img/logo.png" alt="logo">

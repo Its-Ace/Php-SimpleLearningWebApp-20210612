@@ -2,7 +2,7 @@
     //Returns sqli connection if we have successful connection
     require_once("connection_test.php");
     //Session info if any is already exist
-    require_once("config.php");
+    require_once("redirection.php");
 
     global $conn;
     global $row;
@@ -11,22 +11,25 @@
     {
         $conn = test_connection();   
     }
-
     $validation_masg = '';
+
     if (isset($_POST['logon']) && !empty($_POST['user_name']) && !empty($_POST['user_password'])) 
     {
+        //Converting into html entities
         $username = htmlentities($_POST['user_name']);
         $password = htmlentities($_POST['user_password']);
+        
+        //Query
         $query1_result = mysqli_query($conn,"SELECT * FROM admin WHERE sap = '$username'" );
         $query2_result = mysqli_query($conn,"SELECT * FROM admin WHERE password = '$password'" );
-        //count
+        //count for getting admins data
         $Admin_check_name = mysqli_num_rows($query1_result);
         $Admin_check_password = mysqli_num_rows($query2_result);
        
+        //Query 
         $student_result_name = mysqli_query($conn,"SELECT * FROM students WHERE sap = '$username'" );
         $student_result_password =  mysqli_query($conn,"SELECT * FROM students WHERE password = '$password'" );
-        
-        //count
+        //Counts for getting students data
         $student_check_name = mysqli_num_rows($student_result_name);
         $student_check_password = mysqli_num_rows($student_result_password);
        
@@ -38,7 +41,7 @@
             $_SESSION['user_name'] = $row['name'];
             $_SESSION['user_type'] = 'Student';
             $_SESSION['active_time'] = time();
-            header("Location: admin/dashboard.html");
+            header("Location: student/dashboard.php");
         }
         else if ($Admin_check_name == 1 && $Admin_check_password >= 1) 
         {   
@@ -46,7 +49,7 @@
             $_SESSION['user_name'] = true;
             $_SESSION['user_type'] = 'Admin';
             $_SESSION['active_time'] = time();
-            header("Location: student/dashboard.html");
+            header("location: admin/dashboard.php");
      
         }
         else 
@@ -56,6 +59,12 @@
      
          
     }
+    elseif(isset($_POST['logon']))
+    {
+        //This means either form isset or fields are not set
+        $validation_masg = "Some fields might not be filled.";
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +88,7 @@
                 <img src="./img/default.png" alt="" style="width: 100px; height: 100px; padding-top: 10px;margin-bottom: 11px;">
             </div>   
             <ul class="nav-contained">
-                <li>
+                <li id="home-bar">
                     <a href = "./home.php">Home</a>
                 </li>
                 <li>
@@ -105,13 +114,11 @@
                     <h2>Provide your credentials</h2>
                 </div>
                 <?php
-                    if($validation_masg
-             != ''){
+                    if($validation_masg != ''){
                         echo'   
                         <div>
                             <div class="card-box-red-warning" style = "padding-left: 10px; margin-top: 10px;">'.
-                                $validation_masg
-                         .
+                                $validation_masg.
                             "</div>
                         </div>";
                     }
