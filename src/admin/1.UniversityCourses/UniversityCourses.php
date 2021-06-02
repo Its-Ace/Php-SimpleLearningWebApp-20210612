@@ -1,3 +1,49 @@
+<?php
+
+   function get_courses()
+   {
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "ems";
+
+    $conn = new mysqli( $servername, $username,$password,$dbname);
+
+    if(!$conn){
+      die("Connection failed: " .mysqli_connect_error());
+    }
+
+    $query="select * from course";
+    $data= mysqli_query($conn,$query);
+
+    $courses=array();
+
+    while($object=mysqli_fetch_object($data))
+    {
+       $courses[]=$object;
+    }
+
+    mysqli_close($conn);
+     return $courses;
+  }
+
+  function get_table()
+  {
+      $table_str='';
+      $courses=get_courses();
+      $i=1;
+      foreach($courses as $Course)
+      { 
+          
+          $table_str.=' '.$Course->name;
+         
+
+      }
+     
+      return $table_str;
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,10 +92,12 @@
                 </div>
                 <input type="text" placeholder="Search course">
             </div>
+            <?php echo  get_table(); ?>
             
             <div class="card-box" style="width: 80%;">
                 <div class="table-course">
-                    <table id = "courses-items">
+               
+                    <!-- <table id = "courses-items">
                         <tr>
                         <th>Semester no</th>
                         </tr>
@@ -57,14 +105,16 @@
                             <td>Course name</td>
                             <td>&nbsp;</td>
                             <td><a href = "details.html"><button>details</button></a></td>
-                            <td><a href = "options.html"><button>Option</button></a></td>
+                            <td><a><button name = "update">Update</button></a></td>
+                            <td><a><button name = "delete">Delete</button></a></td>
                         </tr>
                         <tr>
                             <td>Course name</td>
                             <td>&nbsp;</td>
                             <td><a href = "details.html"><button>details</button></a></td>
-                            <td><a href = "options.html"><button>Option</button></a></td>
-                        </tr>
+                            <td><a ><button>Update</button></a></td>
+                            <td><a ><button>Delete</button></a></td>
+                        </tr> -->
                     </table>
                 </div>
             </div>
