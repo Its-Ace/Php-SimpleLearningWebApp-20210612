@@ -46,6 +46,7 @@
         else if ($Admin_check_name == 1 && $Admin_check_password >= 1) 
         {   
             $row = mysqli_fetch_array($query1_result,MYSQLI_ASSOC);
+            $_SESSION["user_id"] = $row['sap'];
             $_SESSION['user_name'] = true;
             $_SESSION['user_type'] = 'Admin';
             $_SESSION['active_time'] = time();

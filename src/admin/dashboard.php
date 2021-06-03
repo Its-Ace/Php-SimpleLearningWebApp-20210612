@@ -1,5 +1,10 @@
 <?php
-    
+    require("../connection_test.php");
+    require("../SESSION_CHECKER.PHP");
+    require("../config.php");
+
+    global $con;
+    $con = test_connection();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,21 +26,32 @@
             <label>Dashboard</label>
             <div class="users-data">
                 <div class = "content">
-                    <strong>Name</strong>
-                    <a href="account.html">Account settings</a>
+                    <strong><?php $_SESSION["active_user"]?></strong>
+                    <a href="./accounts_settings.php">Account settings</a>
                 </div>
                 <div class="user-info-summary">
-                    <img src = "../img/blank-profile.png" style="width: 50px ; height: 50px; border: solid 6px rgba(255, 255, 255, 0.26); border-radius: 50%;" alt = "N/A"><br>
-                   
+                <?php 
+                //If user profile is found or not found
+                    if(!empty(mysqli_query($con,"SELECT * FROM userProfiles WHERE userId = " +  $_SESSION["user_id"])) )
+                    {
+                        echo "Found user ";
+
+                    }
+                    else
+                    {
+                        echo "<img src = '../img/blank-profile.png' style = 'width: 50px ; height: 50px; border: solid 6px rgba(255, 255, 255, 0.26); border-radius: 50%;' alt = 'N/A'><br>";
+                    }
+                
+                
+                ?>
+                                        
                     <div class="dropdown">
-                    <i class=""></i>
-                        <button onclick="myFunction()" class="fas fa-angle-down"></button>
+                        <button onclick="openDropdown()" class="fas fa-angle-down"></button>
                             <div id="dropdown-menu-id" class="dropdown-content">
                                 <?php 
                                     echo '<a href="../logout.php?REF=logout">Log-out</a>';
                                 ?> 
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
+                                <a href="#">Accounts Settings</a>
                             </div>
                     </div> 
                
@@ -81,7 +97,10 @@
             </a>
         </div>     
     </div>  
-    
+    <div onClick = "" class="alert-session">
+        <p>And I'm a Photographer</p>
+        <button class="button button2 ">OK</button>
+    </div>
 </body>
 <footer>
     <div class="btm-footer">
@@ -91,9 +110,12 @@
 </html>
 <script type="text/javascript">
 
-function myFunction() {
+function openDropdown() 
+{
   document.getElementById("dropdown-menu-id").classList.toggle("show");
+
 }
+
 
 //If we have shown the content then if we click on another think then that then it should close
 window.onclick = function(event) {
