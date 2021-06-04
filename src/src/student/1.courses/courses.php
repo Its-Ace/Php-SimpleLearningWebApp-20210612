@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,15 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../css/style.css">
-    
-   
     <title>University Courses</title>
 </head>                                                                      
 <body>
-    <?php require_once 'actions.php';
+<?php require_once 'S_Actions.php';
           
-     ?>
-
+          ?>
     <header class = "header-default">
         <nav class="nav-main">
             <div class="brand">
@@ -37,7 +32,7 @@
     </header>
     <div>
         <div class="sidebar">
-            <a href="UniversityCourses.php"><i class="active-page fa fa-fw fa-home"></i></a>
+            <a href="courses.php"><i class="active-page fa fa-fw fa-home"></i></a>
             <a href="#services"><i class="fa fa-fw fa-wrench"></i></a>
             <a href="#clients"><i class="fa fa-fw fa-user"></i></a>
             <a href="#contact"><i class="fa fa-fw fa-envelope"></i></a>
@@ -54,14 +49,6 @@
                 </div>
                 <input type="text" placeholder="Search course">
             </div>
-           
-            <div>
-                <div class="signin-button">
-                    <a style="text-decoration: none;" href="../1.UniversityCourses/AddCourses.php">Add Course</a>
-                </div>
-            </div>
-
-
             <?php  
                         include 'C:\xampp\htdocs\webengineering-Joel\src\db.php';
                         $sql = $conn->query("select * from course");
@@ -74,52 +61,26 @@
                         }
                            ?> 
 
-            <?php if(isset($_SESSION['message'])): ?> 
-                             
-                <div class="alertalert-<?=$_SESSION['msg_type']?>"> 
- 
-            <?php 
-                     echo $_SESSION['message'];
-                     unset($_SESSION['message']);     
-            ?>
-            </div>
-            <?php endif ?>
-             <div class="card-box" style="width: 80%;">
+            <div class="card-box" style="width: 80%;">
                 <div class="table-course">
-                
-                     <table id = "courses-items" >
-                        
-                              <tr>
-                                  <th>ID</th>
-                                  <th>Course Name</th>
-                                  <th>Semester</th>
-                                  <th>Status</th>
-                                  <th>Actions</th>
-                              </tr>         
-                          <?php
+                    <table id = "courses-items">
+                        <tr>
+                        <th style="text-align:center;">Semester no</th>
+                        </tr>
+                        <?php
                               while($row = $sql->fetch_assoc()): ?>
-                          <tr>
-                              <td width="30"><?php echo $row['id'] ?></td>
-                              <td><?php echo $row['name'] ?></td>
-                              <td><?php echo $row['semester'] ?></td>
-                              <td><?php echo $row['status'] ?></td>
-                              <td width="220" >
-                                  <a href="Update.php?edit=<?php echo $row["id"]; ?>"
-                                     class="button">Edit</a>
-                                  <a href="actions.php?delete=<?php echo $row['id']; ?>"
-                                     class="button">Delete</a>
-                              </td>
-                          </tr>
-                          <?php endwhile; ?>
-                          
+                        <tr>
+                              <td width="300" style="text-align:center;"><?php echo $row['name'] ?></td>
+                            
+                            <td width="20" style="text-align:center;"><a href="details.php?detail=<?php echo $row["id"]; ?>"
+                                     class="button">Details</a></td>
+                        </tr>
+                        <?php endwhile; ?>
                     </table>
                 </div>
             </div>
-   </div>
-                   </div>
-    
+        </div>
     </div>
-    
 </body>
 <footer>
     <div class="btm-footer">

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../css/style.css">
-    <title>University Courses</title>
-</head>                                                                      
+    <title>Students Information</title>
+</head>                                                                                   
 <body>
     <header class = "header-default">
         <nav class="nav-main">
@@ -37,37 +37,47 @@
         <div class="card-box">
             <div class="program-view">
                 <div class="dropdown">
-                    <button class="dropbtn">Select Program</button>
+                    <button class="dropbtn">Select program</button>
                     <div class="dropdown-content">
-                      <a href="#">Link 1</a>
-                      <a href="#">Link 2</a>
-                      <a href="#">Link 3</a>
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
                     </div>
                 </div>
-                <input type="text" placeholder="Search course">
+                <input type="text" placeholder="Search student">
             </div>
-            
             <div class="card-box" style="width: 80%;">
-                <div class="table-course">
-                    <table id = "courses-items">
+                <div class="table-students">
+                    <table id="courses-items">
                         <tr>
-                        <th>Semester no</th>
+                            <th>Semester no</th>
+                            <th>SAP</th>
+                            <th>CGPA</th>
+                            <th>SGPA</th>
+                            <th>Semester</th>
+                            <th>Enrollment Form</th>
                         </tr>
                         <tr>
-                            <td>Course name</td>
-                            <td>&nbsp;</td>
-                            <td><a href = "details.html"><button>details</button></a></td>
-                        </tr>
+                            <td>name1</td>
+                            <td>1111</td>
+                            <td>3.25</td>
+                            <td>2.0</td>
+                            <td>5th</td>
+                            <td id = "view-button"><a href= "studentInformation.html"><button>Status</button></a></td>
                         <tr>
-                            <td>Course name</td>
-                            <td>&nbsp;</td>
-                            <td><a href = "details.html"><button>details</button></a></td>
+                            <td>name1</td>
+                            <td>1111</td>
+                            <td>3.25</td>
+                            <td>2.0</td>
+                            <td>5th</td>
+                            <td id = "view-button"><a href= "studentInformation.html"><button>Status</button></a></td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
     </div>
+    
 </body>
 <footer>
     <div class="btm-footer">
@@ -75,11 +85,3 @@
     </div>
 </footer>
 </html>
-<script>
-    function openNav() {
-      document.getElementById("mySidenav").style.display = "block";
-    }
-    function closeNav() {
-      document.getElementById("mySidenav").style.display = "none";
-    }
-</script>

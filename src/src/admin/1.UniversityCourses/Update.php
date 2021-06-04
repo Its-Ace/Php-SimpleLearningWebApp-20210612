@@ -1,22 +1,3 @@
-<?php
-
-    include 'C:\xampp\htdocs\webengineering-Joel\src\db.php';
-
-   if($conn && !empty($_POST))
-   {
-      $id=$_POST['CourseID'];
-      $name=$_POST['CourseName'];
-      $semester=$_POST['Semester'];
-      $status=$_POST['Status'];
-
-      $sql = "insert into course(id,name,semester,status) value ('$id','$name','$semester','$status')";
-      mysqli_query($conn, $sql);
-   }
-   else
-   {
-     
-   }
-?>
 
 <!DOCTYPE html>
 <html>
@@ -30,6 +11,7 @@
       <title>Home</title>
    </head>
    <body   class = "admin-dboard">
+  
       
    <header class = "header-default" style="position: asolute">
         <nav class="nav-main">
@@ -57,31 +39,49 @@
       <a href="#contact"><i class="fa fa-fw fa-envelope"></i></a>
    </div>
    <div class="card-box">
-      <form method = "post" action = "">
-         <p>
-            <label for = "Course ID">Course ID: </label>
-         </p>
-            <input type = "text" name = "CourseID" id = "id">
+   <h2> UPDATE FORM </h2> 
+      <?php
+          
+          $conn = mysqli_connect( "localhost","root","","ems",) or die("Connection failed") ;
+
+          $C_id = $_GET['edit'];
+          $sql = "SELECT * FROM course WHERE id = {$C_id} ";
+          $result = mysqli_query($conn,$sql) or die("Query failed");
+
+          if(mysqli_num_rows($result) > 0){  
+              while($row = mysqli_fetch_assoc($result)){   
+      ?>
+       
+   <form name = "Insert_Form" method = "post" action = "actions.php">
+
          <p>
             <label for = "Course Name">Course Name:</label>
          </p>
-            <input type = "text" name = "CourseName" id = "name">
+            <input type = "hidden" name = "CourseID" id = "id"  value="<?php echo $row['id'] ?> "/>
+            <input type = "text" name = "CourseName" id = "name" value="<?php echo $row['name'] ?>"/>
          <p>
             <label for = "Semester">Semester:</label>
          </p>
-            <input type = "text" name = "Semester" id = "semester">
+            <input type = "text" name = "Semester" id = "semester"  value="<?php echo $row['semester']; ?>"/>
          <p>
             <label for = "Status">Status:</label>
          </p>
-            <select id    = "status" name = "Status">
+            <select id    = "status" name = "Status" autofocus value = "<?php echo $row['status']; ?>">
                <option value = "Active">Active</option>
                <option value = "Not Active">Not Active</option>
             </select>
-
-            <input type = "submit" name = "Submit" id = "Submit" value = "Submit">
+            <br>
+            <input type = "submit" name = "Submit" id = "Submit" value = "Update"/>
          <p>&nbsp</p>
 
       </form>
+      <?php
+              }
+          }
+      ?>
+      
+
+
 
    </div>
    </div>
